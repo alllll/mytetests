@@ -41,7 +41,9 @@ class _MyHomePageState extends State<MyHomePage>
     animation.addListener(() {
       setState(() {});
     });
-    controller.forward();
+
+    Future.delayed(Duration(seconds: 2)).then((value) => controller.forward());
+
     super.initState();
   }
 
